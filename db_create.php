@@ -4,7 +4,7 @@
  try{
      $conn = new PDO ( "sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
      $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-     $sql = "CREATE TABLE dragons (id int IDENTITY(1,1) PRIMARY KEY, name varchar(45) DEFAULT NULL, color varchar(45) DEFAULT NULL, element varchar(45) DEFAULT NULL, moves varchar(45) DEFAULT NULL, created_at datetime DEFAULT NULL, updated_at datetime DEFAULT NULL)";
+     $sql = "CREATE TABLE mbrAcct (fname int IDENTITY(1,1) PRIMARY KEY, lname varchar(45) DEFAULT NULL, email varchar(45) DEFAULT NULL, age int(45) DEFAULT NULL, location varchar(45) DEFAULT NULL, created_at datetime DEFAULT NULL, updated_at datetime DEFAULT NULL)";
      $conn->query($sql);
 
  }
