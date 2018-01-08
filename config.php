@@ -23,7 +23,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 $host       = "tcp:masserver.database.windows.net,1433";
 $username   = "yokota";
-$password   = "Sports12!@!";
+$password   = "Sports12!@";
 $dbname     = "masDB"; //will use later
 $dsn        = '';//"mysql:host=$host;dbname=$dbname"; //will use later
 $options    = array(
