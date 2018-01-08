@@ -25,7 +25,7 @@ $host       = "tcp:masserver.database.windows.net,1433";
 $username   = "yokota";
 $password   = "Sports12!@";
 $dbname     = "masDB"; //will use later
-$dsn        = '';//"mysql:host=$host;dbname=$dbname"; //will use later
+$dsn        = "sqlsrv:server = tcp:masserver.database.windows.net,1433"; //"mysql:host=$host;dbname=$dbname"; //will use later
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
               );
