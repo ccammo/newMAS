@@ -14,12 +14,12 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
+/**
 // SQL Server Extension Sample Code:
 $connectionInfo = array("UID" => "yokota@masserver", "pwd" => "Sports12!@", "Database" => "masDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:masserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-
+**/
 
 if (isset($_POST['submit']))
 {
@@ -41,7 +41,7 @@ if (isset($_POST['submit']))
 
 		$sql = sprintf(
 				"INSERT INTO %s (%s) values (%s)",
-				"users",
+				"mbrAcct",
 				implode(", ", array_keys($new_user)),
 				":" . implode(", :", array_keys($new_user))
 		);
