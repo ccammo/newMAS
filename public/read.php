@@ -18,7 +18,7 @@ if (isset($_POST['submit']))
 		$connection = new PDO("sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
 
 		$sql = "SELECT * 
-						FROM users
+						FROM mbrAcct
 						WHERE location = :location";
 
 		$location = $_POST['location'];
