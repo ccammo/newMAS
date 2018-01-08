@@ -10,7 +10,7 @@ require "config.php";
 
 try 
 {
-	$connection = new PDO("sqlsrv:server = tcp:mas1.database.windows.net,1433; Database = MAS1", "christopher.camillucci", "{Yokota123}"), $root, $root, $options);
+	$connection = new PDO("sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
 	//$sql = file_get_contents("data/init.sql");
 	$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
