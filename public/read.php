@@ -15,10 +15,10 @@ if (isset($_POST['submit']))
 		require "../config.php";
 		require "../common.php";
 
-		$connection = new PDO("sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
+		$connection = new PDO("sqlsrv:server = tcp:162.241.224.44,1433; Database = yokotasp_test", "yokotasp_admin", "Password1!");
 
 		$sql = "SELECT * 
-						FROM mbrAcct
+						FROM test
 						WHERE location = :location";
 
 		$location = $_POST['location'];

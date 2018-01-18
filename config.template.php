@@ -14,14 +14,15 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-$host       = "tcp:162.241.224.44";
+$host       = "162.241.224.44";
 $username   = "yokotasp_admin";
 $password   = "Password1!";
-$dbname     = "test"; //will use later
-$dsn        = "mysql:host=$tcp:162.241.224.44;dbname=$yokotasp_test"; //will use later
+$dbname     = "yokotasp_test"; //will use later
+$dsn        = "mysql:host=$162.241.224.44;dbname=$yokotasp_test"; //will use later
+
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "yokota@yokotasports.com", "pwd" => "Password1!", "Database" => "yokotasp_test", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "yokota@masserver", "pwd" => "Password1!", "Database" => "yokotasp_test", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:162.241.224.44,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
