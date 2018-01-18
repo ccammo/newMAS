@@ -5,11 +5,11 @@
  *
  */
 
-$host       = "localhost";
-$username   = "root";
-$password   = "root";
-$dbname     = "test";
-$dsn        = "mysql:host=$host;dbname=$dbname";
+$host       = "162.241.224.44";
+$username   = "yokotasp_admin";
+$password   = "Password1!";
+$dbname     = "test"; //will use later
+$dsn        = "mysql:host=$162.241.224.44;dbname=$yokotasp_test"; //will use later
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
               );
