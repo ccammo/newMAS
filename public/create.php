@@ -5,7 +5,21 @@
  * users table.
  *
  */
-
+// PHP Data Objects(PDO) Sample Code:
+try {
+    $conn = new PDO("sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+/**
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "yokota@masserver", "pwd" => "Sports12!@", "Database" => "masDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:masserver.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+**/
 
 if (isset($_POST['submit']))
 {
@@ -15,7 +29,7 @@ if (isset($_POST['submit']))
 
 	try 
 	{
-		$connection = new PDO($dsn, $username, $password, $options);
+		$connection = new PDO("sqlsrv:server = tcp:masserver.database.windows.net,1433; Database = masDB", "yokota", "Sports12!@");
 		
 		$new_user = array(
 			"firstname" => $_POST['firstname'],
@@ -27,7 +41,7 @@ if (isset($_POST['submit']))
 
 		$sql = sprintf(
 				"INSERT INTO %s (%s) values (%s)",
-				"users",
+				"mbrAcct",
 				implode(", ", array_keys($new_user)),
 				":" . implode(", :", array_keys($new_user))
 		);
