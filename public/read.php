@@ -15,7 +15,7 @@ if (isset($_POST['submit']))
 		require "../config.php";
 		require "../common.php";
 
-		$connection = new PDO("sqlsrv:server = tcp:162.241.224.44,1433; Database = yokotasp_test", "yokotasp_admin", "Password1!");
+		$connection = new PDO("sqlsrv:server = tcp:#####; Database = #####", "#####", "#####");
 
 		$sql = "SELECT * 
 						FROM test
