@@ -7,19 +7,14 @@
  */
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:162.241.224.44,1433; Database = yokotasp_test", "yokotasp_admin", "Password1!");
+    $conn = new PDO("sqlsrv:server = tcp:#####; Database = #####", "#####", "#####");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-/**
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "yokota@masserver", "pwd" => "Sports12!@", "Database" => "masDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:masserver.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-**/
+
 
 if (isset($_POST['submit']))
 {
