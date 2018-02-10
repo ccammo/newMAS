@@ -14,24 +14,24 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-$host       = "tcp:162.241.224.44";
-$username   = "yokotasp_admin";
-$password   = "Password1!";
-$dbname     = "test"; //will use later
-$dsn        = "mysql:host=$tcp:162.241.224.44;dbname=$yokotasp_test"; //will use later
+$host       = "######";
+$username   = "######";
+$password   = "######";
+$dbname     = "######"; //will use later
+$dsn        = "######"; //will use later
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "yokota@yokotasports.com", "pwd" => "Password1!", "Database" => "yokotasp_test", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:162.241.224.44,1433";
+$connectionInfo = array("UID" => "#####", "pwd" => "#####", "Database" => "#####", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "#####";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
 
-$host       = "tcp:162.241.224.44,1433";
-$username   = "yokotasp_admin";
-$password   = "Password1!";
-$dbname     = "yokotasp_test"; //will use later
-$dsn        = "sqlsrv:server = tcp:162.241.224.44,1433"; //"mysql:host=$host;dbname=$dbname"; //will use later
+$host       = "#####";
+$username   = "#####";
+$password   = "#####";
+$dbname     = "#####"; //will use later
+$dsn        = "#####"; //"mysql:host=$host;dbname=$dbname"; //will use later
 
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
